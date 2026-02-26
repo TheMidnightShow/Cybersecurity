@@ -1,0 +1,61 @@
+# Botium Toys - Auditoria de Segurança da Informação
+
+## Visão Geral
+Este projeto apresenta uma auditoria de segurança realizada na organização fictícia "Botium Toys".
+
+O objetivo foi avaliar ativos, controles existentes e práticas de conformidade, identificando riscos e propondo melhorias na postura de segurança da empresa.
+
+## Objetivo
+Avaliar o programa de segurança da informação da organização, analisando:
+
+- Gestão de ativos
+- Controles de acesso
+- Proteção de dados
+- Continuidade de negócios
+- Conformidade com boas práticas
+
+## Escopo
+A auditoria contemplou:
+
+- Equipamentos locais
+- Dispositivos de funcionários
+- Rede interna
+- Sistemas corporativos (contábil, telecom, banco de dados, e-commerce, inventário)
+- Retenção e armazenamento de dados
+- Sistemas legados
+- Segurança física (loja, escritório e armazém)
+
+## Metodologia
+A análise foi baseada no Cybersecurity Framework do NIST (National Institute of Standards and Technology), com foco na função Identify e avaliação de controles e riscos.
+
+## Avaliação de Risco
+Nível de risco geral identificado: 8/10 (Alto)
+
+Principais fatores de risco:
+- Gestão inadequada de ativos
+- Ausência de criptografia para dados de cartão
+- Falta de plano de recuperação de desastres
+- Controles de acesso insuficientes
+- Ausência de sistema de detecção de intrusão (IDS)
+
+## Principais Falhas Identificadas
+- Inventário de ativos inexistente
+- Classificação de ativos inexistente
+- Ausência de backups
+- Política de senha fraca
+- Falta de controle baseado em menor privilégio
+- Ausência de IDS
+
+## Controles Existentes
+- Firewall configurado
+- Antivírus monitorado
+- Controles de integridade de dados
+- Segurança física adequada (CCTV, trancas e sistema contra incêndio)
+
+## Recomendações
+- Implementar criptografia de dados sensíveis
+- Aplicar princípio do menor privilégio
+- Implantar IDS
+- Criar política de backup e plano de recuperação de desastres
+- Fortalecer política de senhas
+- Formalizar inventário e classificação de ativos
