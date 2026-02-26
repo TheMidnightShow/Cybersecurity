@@ -1,0 +1,97 @@
+# RELATÓRIO DE AUDITORIA DE SEGURANÇA DA INFORMAÇÃO
+
+Organização: Botium Toys  
+Auditor: Vinícius De Oliveira Soares  
+Data: 26/02/2026
+
+---
+
+## 1. Objetivo
+
+Este relatório tem como objetivo avaliar o programa de segurança da informação da organização Botium Toys, analisando ativos, controles implementados e práticas de conformidade, a fim de identificar riscos e propor melhorias.
+
+---
+
+## 2. Escopo
+
+A auditoria abrangeu:
+
+- Equipamentos utilizados nas operações internas
+- Dispositivos de colaboradores
+- Infraestrutura de rede interna
+- Sistemas corporativos (contábil, telecomunicações, banco de dados, e-commerce e inventário)
+- Processos de retenção e armazenamento de dados
+- Sistemas legados
+- Estrutura física (loja, escritório e armazém)
+
+---
+
+## 3. Metodologia
+
+A avaliação foi conduzida com base no Cybersecurity Framework (CSF) desenvolvido pelo NIST (National Institute of Standards and Technology), com foco na identificação de ativos, análise de riscos e verificação de controles existentes.
+
+---
+
+## 4. Avaliação de Risco
+
+Foi identificado um nível de risco geral classificado como 8/10 (Alto).
+
+Fatores determinantes:
+- Gestão inadequada de ativos
+- Ausência de controles críticos
+- Falta de criptografia para dados sensíveis
+- Inexistência de plano de recuperação de desastres
+- Deficiências em controle de acesso
+
+O impacto potencial varia de médio a alto, especialmente em caso de vazamento de dados ou interrupção operacional.
+
+---
+
+## 5. Principais Constatações
+
+### 5.1 Gestão de Ativos
+- Não há inventário formal de ativos.
+- Não existe classificação de ativos.
+- Não foi realizada análise de impacto no negócio.
+
+### 5.2 Controle de Acesso
+- Princípio do menor privilégio não implementado.
+- Não há separação de funções.
+- Colaboradores possuem acesso excessivo a dados sensíveis.
+
+### 5.3 Proteção de Dados
+- Dados de cartão de crédito não são criptografados.
+- Políticas de privacidade estão documentadas e aplicadas.
+- Existe plano de notificação de violação para clientes da União Europeia.
+
+### 5.4 Controles Técnicos
+- Firewall implementado e configurado.
+- Antivírus instalado e monitorado.
+- Não há sistema de detecção de intrusão (IDS).
+
+### 5.5 Continuidade de Negócios
+- Não existem backups de dados críticos.
+- Não há plano de recuperação de desastres.
+
+### 5.6 Gestão de Senhas
+- Política de senha fraca.
+- Não há sistema centralizado de gerenciamento de senhas.
+
+### 5.7 Sistemas Legados
+- Sistemas monitorados.
+- Não há cronograma formal de manutenção.
+
+### 5.8 Segurança Física
+- Controles físicos adequados (CCTV, trancas e sistema contra incêndio).
+
+---
+
+## 6. Recomendações
+
+1. Implementar criptografia para dados sensíveis.
+2. Aplicar o princípio do menor privilégio.
+3. Implantar sistema de detecção de intrusão (IDS).
+4. Criar política formal de backup.
+5. Desenvolver plano de recuperação de desastres.
+6. Fortalecer política de senhas.
+7. Formalizar inventário e classificação de ativos.
