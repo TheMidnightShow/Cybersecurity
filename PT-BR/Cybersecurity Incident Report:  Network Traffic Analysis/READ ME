@@ -1,0 +1,38 @@
+ Network Traffic Analysis with tcpdump
+ Overview
+
+This project demonstrates the analysis of network traffic using tcpdump to investigate a cybersecurity incident involving DNS resolution failure.
+
+The objective was to identify which network protocol was affected and determine the possible cause of the issue.
+
+ Scenario
+
+Users reported that they were unable to access a website and received the error:
+
+“Destination port unreachable”
+
+The issue was reproduced and analyzed using tcpdump.
+
+ Analysis
+
+During the packet capture, the following was observed:
+
+DNS requests were sent using UDP (port 53)
+The server responded with ICMP error messages
+Error message: “destination unreachable – port 53”
+
+This indicates that the DNS service was not accessible.
+
+ Key Findings
+UDP is used for DNS communication
+Port 53 is required for DNS resolution
+ICMP reported that the destination port was unreachable
+DNS resolution failed, preventing access to the website
+ Possible Causes
+DNS server unavailable
+Firewall blocking port 53
+Misconfiguration of DNS service
+Potential DDoS attack (requires further investigation)
+🛠️ Tools Used
+tcpdump
+Basic networking protocols (DNS, UDP, ICMP)
