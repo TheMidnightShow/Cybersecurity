@@ -1,0 +1,44 @@
+ Cybersecurity Incident Report: Network Traffic Analysis
+ Part 1: Summary of the problem
+
+The network traffic analysis using tcpdump identified communication involving the UDP, DNS, and ICMP protocols.
+
+The captured data shows that UDP packets were sent to port 53 (DNS service), but the server responded with ICMP error messages indicating “destination unreachable – port 53”.
+
+This indicates that the DNS service on the destination server was not accessible.
+
+Key observations:
+
+UDP was used to send DNS queries
+ICMP returned error messages
+Port 53 (DNS) was unreachable
+
+Part 2: Analysis and possible cause
+
+Time incident occurred: 13:24
+
+How the issue was identified:
+Users and the IT team were unable to access the website and received a “destination port unreachable” error.
+
+Actions taken to investigate:
+The IT team used tcpdump to capture and analyze network traffic while attempting to access the website.
+
+Key findings:
+
+DNS requests were sent via UDP to port 53
+The server responded with ICMP error messages
+The DNS service was not reachable
+
+Current status:
+The DNS resolution process is failing, preventing access to the website.
+
+Likely cause:
+The DNS service may be down, misconfigured, or blocked by a firewall.
+A potential DDoS attack could also be a contributing factor, but further investigation is required.
+
+Next steps:
+
+Verify DNS server availability
+Check firewall rules for port 53
+Ensure DNS service is running correctly
+Monitor for abnormal traffic patterns
