@@ -1,0 +1,27 @@
+Cybersecurity Incident Report
+
+Section 1: Identify the type of attack that may have caused this network interruption
+
+One potential explanation for the website’s connection timeout error message is a SYN Flood (DoS) attack.
+
+The logs show a large number of repeated TCP SYN requests coming from the IP address 203.0.113.0 to the web server 192.0.2.1. The attacker continuously sends SYN packets without establishing legitimate HTTP sessions.
+
+This behavior overloads the server’s resources and prevents legitimate users from accessing the website properly.
+
+This event appears to be a DoS SYN Flood attack.
+
+Section 2: Explain how the attack is causing the website to malfunction
+
+When website visitors try to establish a connection with the web server, a three-way handshake occurs using the TCP protocol:
+
+The client sends a SYN packet to request a connection.
+The server responds with a SYN, ACK packet.
+The client sends an ACK packet to complete the connection.
+
+After the connection is established, the client can send HTTP requests such as GET /sales.html and receive a response from the server.
+
+The logs show that the IP address 203.0.113.0 repeatedly sends large numbers of SYN packets to the web server without establishing legitimate web traffic. This behavior is consistent with a SYN Flood attack.
+
+Because the server must allocate resources for every connection attempt, the repeated SYN requests overwhelm the server and reduce its ability to respond to legitimate users.
+
+As a result, valid users experience connection failures, reset connections, and HTTP 504 Gateway Timeout errors while trying to access the website.
