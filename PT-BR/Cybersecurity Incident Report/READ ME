@@ -1,0 +1,85 @@
+# Cybersecurity Incident Report - SYN Flood Attack Analysis
+
+## Overview
+This project contains a cybersecurity incident report analyzing a network interruption caused by a TCP SYN Flood attack.
+
+The objective of this report is to identify the attack type, explain how it affected the web server, and describe the impact on legitimate users attempting to access the company website.
+
+---
+
+## Scenario
+A company web server began experiencing connection timeout errors and interruptions while employees attempted to access the company sales webpage.
+
+Network traffic was analyzed using packet capture logs from Wireshark. The logs revealed a large number of repeated TCP SYN requests coming from a suspicious IP address.
+
+The abnormal traffic overwhelmed the server and caused legitimate user connections to fail.
+
+---
+
+## Attack Identified
+### SYN Flood (DoS) Attack
+
+A SYN Flood attack is a Denial of Service (DoS) attack where an attacker repeatedly sends TCP SYN packets to a target server without completing legitimate network sessions.
+
+This forces the server to allocate resources for incomplete or unnecessary connections until the server becomes overloaded.
+
+---
+
+## Technical Details
+
+### Normal TCP Three-Way Handshake
+A normal TCP connection follows these steps:
+
+1. Client sends a SYN packet
+2. Server responds with SYN, ACK
+3. Client sends ACK
+
+After the handshake is completed, normal HTTP communication can begin.
+
+Example:
+
+GET /sales.html HTTP/1.1
+
+---
+
+## Indicators of Attack
+The packet logs showed:
+
+- Repeated SYN packets from IP address `203.0.113.0`
+- Very little or no legitimate HTTP traffic from the attacker
+- Connection reset packets (`RST, ACK`)
+- HTTP `504 Gateway Timeout` errors
+- Legitimate users unable to access the website properly
+
+---
+
+## Impact on the Organization
+The attack negatively affected the company by:
+
+- Slowing down or interrupting website access
+- Preventing employees and customers from accessing sales pages
+- Overloading server resources
+- Creating connection timeout errors
+- Reducing service availability
+
+---
+
+## Mitigation Steps
+Potential mitigation strategies include:
+
+- Configuring firewall rules to block malicious traffic
+- Using SYN flood protection on network devices
+- Implementing rate limiting
+- Using intrusion detection and prevention systems (IDS/IPS)
+- Monitoring abnormal traffic patterns
+- Using load balancing and DDoS protection services
+
+---
+
+## Tools Used
+- Wireshark
+- TCP packet analysis
+- HTTP traffic analysis
+
+---
+
